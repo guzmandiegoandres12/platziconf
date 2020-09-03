@@ -47,6 +47,10 @@ class ScheduleFracment : Fragment() , Schedulelistener{
        obserViewMOdel()
     }
     fun obserViewMOdel(){
+<<<<<<< HEAD
+=======
+        rlBaseSchedule.visibility = View.INVISIBLE
+>>>>>>> 2cab2f275c19f58f3846f53d046cb541332aaa34
         viewModel.listschedule.observe(this, Observer<List<Conference>> { schedule->scheduleAdapter.updateDate(schedule)})
         viewModel.isLoadin.observe(this, Observer <Boolean> {
             if(it != null)
