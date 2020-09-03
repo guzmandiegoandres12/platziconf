@@ -8,6 +8,7 @@ import android.view.animation.AnimationUtils
 import com.platzi.conf.R
 import kotlinx.android.synthetic.main.activity_splash_screenn.*
 
+
 class SplashScreennActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

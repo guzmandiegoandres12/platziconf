@@ -21,10 +21,12 @@ class ScheduleViewModel: ViewModel() {
             override fun onSuccess(result: List<Conference>?) {
                 listschedule.postValue(result)
                 processFinished()
+                Log.e("sussess","eprocceso exitos")
             }
 
             override fun onFailed(exception: Exception) {
                 processFinished()
+                Log.e("norExis","eprocceso  no exitos")
             }
 
         })

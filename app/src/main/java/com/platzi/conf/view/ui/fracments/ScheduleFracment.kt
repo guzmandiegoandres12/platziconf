@@ -36,6 +36,7 @@ class ScheduleFracment : Fragment() , Schedulelistener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.e("Cargo","cargaste visto")
         viewModel = ViewModelProviders.of(this).get(ScheduleViewModel::class.java)
         viewModel.refresh()
         scheduleAdapter = ScheduleAdapter(this)
@@ -46,7 +47,7 @@ class ScheduleFracment : Fragment() , Schedulelistener{
        obserViewMOdel()
     }
     fun obserViewMOdel(){
-
+        rlBaseSchedule.visibility = View.INVISIBLE
         viewModel.listschedule.observe(this, Observer<List<Conference>> { schedule->scheduleAdapter.updateDate(schedule)})
         viewModel.isLoadin.observe(this, Observer <Boolean> {
             if(it != null)
